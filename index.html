@@ -2,166 +2,135 @@
 <html>
 <head>
 <title>Sharma Transport Services</title>
-  <meta name="google-site-verification" content="X23Q-ZZgzYxRiaUnSaGR2hWMWzP-cOd2eZF2HPqW7v4" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-  body {
-background:#e9edf2;
-font-family: Arial, sans-serif;
-margin:0;
-  }
-  
 
-header{
+/* BODY */
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0f172a;
 color:white;
+}
+
+/* CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+/* HERO */
+.hero{
+background:url('banner.jpg') no-repeat center/cover;
+height:300px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero-box{
+background:rgba(0,0,0,0.6);
+padding:20px;
+border-radius:10px;
 text-align:center;
 }
 
+.hero-box h1{
+margin:0;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:10px 20px;
+margin-top:10px;
+background:#25D366;
+color:white;
+border-radius:25px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* NAV */
 nav{
-background:#222;
+background:#111;
 padding:10px;
 text-align:center;
 }
 
 nav a{
 color:white;
-margin:15px;
+margin:10px;
 text-decoration:none;
 font-weight:bold;
 }
-  nav {
-position: sticky;
-top: 0;
-z-index: 1000;
-  }
 
-section{
-padding:40px;
-}
-  section{
-padding:40px;
-margin:20px;
-border-radius:10px;
-  }
-
+/* CARD */
 .card{
-background:#ffffff;
-padding:20px;
-margin:10px;
-border-radius:8px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-footer{
-background:#0b3d91;
-color:white;
-text-align:center;
-padding:10px;
-}
-  a {
-transition: 0.3s;
-}
-
-a:hover {
-opacity: 0.8;
-}
-
-  .card {
-transition: 0.3s;
-}
-
-.card:hover {
-transform: translateY(-10px);
-box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-  section{
-background:#f5f7fa;
-  }
-  .truck-card{
-display:flex;
-gap:20px;
 background:white;
 color:black;
-margin:20px 0;
 padding:15px;
+margin:10px 0;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
-align-items:center;
 }
 
-.truck-card img{
-width:200px;
-border-radius:10px;
-}
-
-@media(max-width:600px){
-.truck-card{
-flex-direction:column;
-text-align:center;
-}
-  }
-  
-</style>
-
-</head>
-
-<body>
-
-<header style="
-background:url('banner.jpg');
-background-size:cover;
-background-position:center;
-color:white;
-padding:200px 20px;
-text-align:center;
-">
-
-<div style="background:rgba(0,0,0,0.5);padding:30px;border-radius:10px;display:inline-block;">
-<h1>Sharma Transport Services</h1>
-<p>Reliable Transport Across India 🚚</p>
-
-<a href="https://wa.me/919820732768" 
-style="background:#25D366;color:white;padding:12px 25px;text-decoration:none;border-radius:5px;font-weight:bold;">
-Book on WhatsApp
-</a>
-</div>
-  <section>
-<div class="container">
-<h2>Our Fleet</h2>
-<img src="./Truck1.jpg" style="width:300px;border-radius:10px">
-<img src="./Truck2.jpg" style="width:300px;border-radius:10px">
-<img src="./Truck3.jpg" style="width:300px;border-radius:10px">
-<img src="./Truck4.jpg" style="width:300px;border-radius:10px">
-<img src="./Truck5.jpg" style="width:300px;border-radius:10px">
-<img src="./Truck6.jpg" style="width:300px;border-radius:10px">
-<img src="./Truck7.jpg" style="width:300px;border-radius:10px">
-</div>
+/* TRUCK CARD */
 .truck-card{
 display:flex;
-gap:20px;
+gap:15px;
 background:white;
 color:black;
-margin:20px 0;
+margin:15px 0;
 padding:15px;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 align-items:flex-start;
-text-align:left;
 }
 
 .truck-card img{
-width:180px;
-height:120px;
+width:140px;
+height:100px;
 object-fit:cover;
 border-radius:10px;
 }
+
+/* MOBILE */
+@media(max-width:600px){
+.truck-card{
+flex-direction:row;
+}
+.truck-card img{
+width:110px;
+height:80px;
+}
+}
+
+/* FOOTER */
+footer{
+background:#111;
+text-align:center;
+padding:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-box">
+<h1>Sharma Transport Services</h1>
+<p>Reliable Transport Across India 🚛</p>
+<a href="https://wa.me/919820732768" class="btn">Book on WhatsApp</a>
 </div>
-  </section>
-  
+</div>
 
-</header>
-
-
+<!-- NAV -->
 <nav>
 <a href="#">Home</a>
 <a href="#">About</a>
@@ -169,44 +138,85 @@ border-radius:10px;
 <a href="#">Contact</a>
 </nav>
 
+<!-- ABOUT -->
 <section>
+<div class="container">
 <h2>About Us</h2>
 <p>We provide reliable transport and logistics services across India with safe and timely delivery.</p>
+</div>
 </section>
 
+<!-- SERVICES -->
 <section>
+<div class="container">
 <h2>Our Services</h2>
 
 <div class="card">
-<h3>Truck Transport</h3>
-<p>Goods transportation across cities.</p>
+<h3>🚛 Full Truck Load</h3>
+<p>We provide full truck load services across India.</p>
 </div>
 
 <div class="card">
-<h3>Logistics Support</h3>
-<p>Efficient logistics solutions for businesses.</p>
-</div>
-  
-<div class="card">
-<h3>🚚 Truck Transport</h3>
-<p>Safe and reliable goods transportation across cities with experienced drivers.</p>
-  </div>
-
-<div class="card">
-<h3>Fast Delivery</h3>
-<p>On-time delivery with professional drivers.</p>
+<h3>📦 Part Load</h3>
+<p>Affordable part load services for small goods.</p>
 </div>
 
+<div class="card">
+<h3>⚡ Express Delivery</h3>
+<p>Fast and time-bound delivery.</p>
+</div>
+
+</div>
 </section>
 
+<!-- FLEET -->
 <section>
+<div class="container">
 <h2>Our Fleet</h2>
 
-</section>
-<p>📞 Phone: +91 XXXXX XXXXX</p>
-<p>📍 Location: Mumbai, India</p>
+<div class="truck-card">
+<img src="Truck1.jpg">
+<div>
+<h3>Eicher Truck</h3>
+<p><b>Capacity:</b> 10 Tons</p>
+<p><b>Best for:</b> Heavy goods</p>
+<p><b>Price:</b> ₹25/km</p>
+</div>
+</div>
+
+<div class="truck-card">
+<img src="Truck2.jpg">
+<div>
+<h3>Medium Truck</h3>
+<p><b>Capacity:</b> 5 Tons</p>
+<p><b>Best for:</b> City transport</p>
+<p><b>Price:</b> ₹18/km</p>
+</div>
+</div>
+
+<div class="truck-card">
+<img src="Truck3.jpg">
+<div>
+<h3>Mini Truck</h3>
+<p><b>Capacity:</b> 2 Tons</p>
+<p><b>Best for:</b> Small shifting</p>
+<p><b>Price:</b> ₹12/km</p>
+</div>
+</div>
+
+</div>
 </section>
 
+<!-- CONTACT -->
+<section>
+<div class="container">
+<h2>Contact</h2>
+<p>📞 +91 97688 25666</p>
+<p>📍 Mumbai, India</p>
+</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Sharma Transport Services</p>
 </footer>
