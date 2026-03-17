@@ -77,6 +77,29 @@ box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   section{
 background:#f5f7fa;
   }
+  .truck-card{
+display:flex;
+gap:20px;
+background:white;
+color:black;
+margin:20px 0;
+padding:15px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+align-items:center;
+}
+
+.truck-card img{
+width:200px;
+border-radius:10px;
+}
+
+@media(max-width:600px){
+.truck-card{
+flex-direction:column;
+text-align:center;
+}
+  }
   
 </style>
 
@@ -102,17 +125,43 @@ style="background:#25D366;color:white;padding:12px 25px;text-decoration:none;bor
 Book on WhatsApp
 </a>
 </div>
-  <div style="text-align:center;">
-<a href="https://wa.me/919768825666" 
-style="background:#25D366;color:white;padding:12px 20px;text-decoration:none;border-radius:5px;margin:5px;">
-owner
-</a>
+  <section>
+<div class="container">
+<h2>Our Fleet</h2>
 
-<a href="https://wa.me/919769812372" 
-style="background:#128C7E;color:white;padding:12px 20px;text-decoration:none;border-radius:5px;margin:5px;">
-Driver
-</a>
-  </div>
+<div class="truck-card">
+<img src="Truck1.jpg">
+<div>
+<h3>Eicher Truck</h3>
+<p><b>Capacity:</b> 10 Tons</p>
+<p><b>Best for:</b> Heavy goods transport</p>
+<p><b>Price:</b> ₹25 per km</p>
+</div>
+</div>
+
+<div class="truck-card">
+<img src="Truck2.jpg">
+<div>
+<h3>Goods Carrier</h3>
+<p><b>Capacity:</b> 5 Tons</p>
+<p><b>Best for:</b> City delivery</p>
+<p><b>Price:</b> ₹18 per km</p>
+</div>
+</div>
+
+<div class="truck-card">
+<img src="Truck3.jpg">
+<div>
+<h3>Mini Truck</h3>
+<p><b>Capacity:</b> 2 Tons</p>
+<p><b>Best for:</b> Small shifting</p>
+<p><b>Price:</b> ₹12 per km</p>
+</div>
+</div>
+
+</div>
+  </section>
+  
 
 </header>
 
