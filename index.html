@@ -30,6 +30,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 }
+  <button onclick="openForm()" class="book-btn">Book Now</button>
 
 .hero-box{
 background:rgba(0,0,0,0.6);
@@ -167,7 +168,22 @@ transition:0.3s;
   
 </style>
 </head>
+<div id="bookingForm" class="form-popup">
 
+<div class="form-box">
+<span onclick="closeForm()" class="close-btn">✖</span>
+
+<h2>Book Transport</h2>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="phone" placeholder="Phone Number">
+<input type="text" id="pickup" placeholder="Pickup Location">
+<input type="text" id="drop" placeholder="Drop Location">
+
+<button onclick="sendWhatsApp()">Submit</button>
+
+</div>
+</div>
 <body>
 
 <!-- HERO -->
@@ -291,5 +307,116 @@ transition:0.3s;
 </a>
 
   </div>
+  .
+
+  <script>
+
+function openForm(){
+document.getElementById("bookingForm").style.display="block";
+}
+
+function closeForm(){
+document.getElementById("bookingForm").style.display="none";
+}
+
+function sendWhatsApp(){
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let pickup = document.getElementById("pickup").value;
+let drop = document.getElementById("drop").value;
+
+let message = `Booking Request:
+Name: ${name}
+Phone: ${phone}
+Pickup: ${pickup}
+Drop: ${drop}`;
+
+let url = "https://wa.me/91XXXXXXXXXX?text=" + encodeURIComponent(message);
+
+window.open(url, "_blank");
+}
+
+  </script>
+  .book-btn{
+background:#25D366;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+}
+
+.form-popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+z-index:200;
+}
+
+.form-box{
+background:#111;
+color:white;
+padding:20px;
+margin:10% auto;
+width:90%;
+max-width:400px;
+border-radius:10px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.form-box input{
+padding:10px;
+border-radius:5px;
+border:none;
+}
+
+.form-box button{
+background:#25D366;
+color:white;
+padding:10px;
+border:none;
+border-radius:5px;
+}
+
+.close-btn{
+float:right;
+cursor:pointer;
+}
+
+  <script>
+
+function openForm(){
+document.getElementById("bookingForm").style.display="block";
+}
+
+function closeForm(){
+document.getElementById("bookingForm").style.display="none";
+}
+
+function sendWhatsApp(){
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let pickup = document.getElementById("pickup").value;
+let drop = document.getElementById("drop").value;
+
+let message = `Booking Request:
+Name: ${name}
+Phone: ${phone}
+Pickup: ${pickup}
+Drop: ${drop}`;
+
+let url = "https://wa.me/91XXXXXXXXXX?text=" + encodeURIComponent(message);
+
+window.open(url, "_blank");
+}
+
+  </script>
 </body>
 </html>
